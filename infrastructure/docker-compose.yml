@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Data Source=/data/workshopbuddy.db
+    volumes:
+      - sqlite-data:/data
+    depends_on:
+      - db-init
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  db-init:
+    image: alpine:latest
+    volumes:
+      - sqlite-data:/data
+    command: sh -c "mkdir -p /data && chmod 777 /data"
+
+volumes:
+  sqlite-data:
