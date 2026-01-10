@@ -1,35 +1,26 @@
 # Workshop Buddy
 
-Software system to support work in the shop.
-- Always keep track of which materials are available or missing
-- Know which maintenance tasks are coming up and whether all materials are still on hand
+Software system to support work in the shop. Maintenance and inventory system.
+Overview of devices and materials. Knowing which maintenances are done and which are pending and if materials are missing.
+Have a overview of materials (inventory)
 
+## Abstract data model 
 
-## Features
+- Devices (e.g. Car, Mower, Bike)
+- Materials 
+  - Raw 
+  - Auxiliary (e.g. Screws)
+- Association between Devices and raw materials
+  - The association clarifies which raw materials an item needs and whether enough is available
 
-
-- Add, edit, and remove material master data
-  - Maintain the available quantity of a material
-- Add, edit, and remove consumables
-- Add, edit, and remove items
-  - Link items to materials
-    - The association clarifies which materials an item needs and whether enough is available
-- Overview of items and their linked materials
-
-Data description:
-
-- Manage materials (e.g., brake pad) and consumables (e.g., screws)
-  - Inventory list
-- Manage items
-  - Information
-- Link materials and items
-  - Example: brake pads linked to the item "Bicycle"
 
 ## Technologies and Architecture
 
 ### General
 
-- Multi-tenant system. A user logs in and sees only their data.
+- YOU MUST use the `specs.md` to create the system.
+- Use a event-drivend architecture (CQRS, Event Sourcing)
+
 
 ### Frontend
 - React
@@ -37,8 +28,13 @@ Data description:
 - TypeScript
 - Vite
 - Tests
-  - UI tests with Playwright
+  - UI and E2E tests with Playwright
   - Vitest for unit tests
+
+#### UX
+  - The app has a intutive and mobile friendly navigation
+  - Use an appealing design
+
 
 ### Backend
 - .NET web backend with ASP.NET
@@ -49,9 +45,16 @@ Data description:
   - For development use the sqlite database setup in the infrastructure section
 - Swagger documentation
 
+### Communication
+- Use open-telemetry to enable effective observability
+
+
 ### Infrastructure
 - Docker Compose
   - SQLite database for data storage and user management
+
+### Deployment
+- The system is hosted as docker container
 
 ### Tests
 - The main functionalities should be covered by E2E tests
