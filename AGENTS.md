@@ -1,7 +1,7 @@
 # AGENT instructions
 
 ## General
-- Each agent shoud use a `expertise-[agent-name].yaml` located in the folder `expoertise` to get more knowledge about the system.
+- Each agent MUST use a `expertise-[agent-name].yaml` located in the folder `expoertise` to get more knowledge about the system.
 - Always use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
 - 
 ## Development
@@ -10,6 +10,7 @@
 - YOU MUST Develop the software driven by the specification and with a TDD approach.
 - First write appropiate end-to-end tests (derived by the specification) and unit tests
 - After that implement the functionality and run the tests if the implementation is successful
+- All tests MUST pass.
 - A short feedback-loop is important for development productivity. Summarize the test results
 
 
@@ -30,5 +31,5 @@
 ## Review checklist
 - Check if the specification is secured by corresponding tests
 - Update documentation for user facing changes.
-- Each agent updates the expertise file with the current knowledge of the system.
+- Each agent MUST updates the expertise file with the current knowledge of the system.
 - Create a log of the prompts.
