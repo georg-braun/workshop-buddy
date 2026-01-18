@@ -19,8 +19,7 @@ Have a overview of materials (inventory)
 ### General
 
 - YOU MUST use the `specs.md` to create the system.
-- Use a event-drivend architecture (CQRS, Event Sourcing)
-
+- Use a event-driven architecture (CQRS, Event Sourcing)
 
 ### Frontend
 - React
@@ -57,7 +56,8 @@ Have a overview of materials (inventory)
 - The system is hosted as docker container
 
 ### Tests
-- The main functionalities should be covered by E2E tests
+- The main functionalities (described in `specs.json`) MUST be covered by E2E tests
+- Every test MUST PASS.
 
 ## Documentation
-The most important functions are documented in `README.md`.
+Create a `README.md` for the most important functionalities and describe how to run the program.
