@@ -1,7 +1,7 @@
 # AGENT instructions
 
 ## General
-- Each agent MUST use a `expertise-[agent-name].yaml` located in the folder `expoertise` to get more knowledge about the system.
+- Each agent MUST use a `expertise-[agent-name].yaml` located in the folder `expertise` to get more knowledge about the system.
 - Always use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
 - 
 ## Development
