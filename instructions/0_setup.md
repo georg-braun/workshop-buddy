@@ -18,7 +18,6 @@ Have a overview of materials (inventory)
 
 ### General
 
-- YOU MUST use the `specs.md` to create the system.
 - Use a event-driven architecture (CQRS, Event Sourcing)
 
 ### Frontend
@@ -31,9 +30,7 @@ Have a overview of materials (inventory)
   - Vitest for unit tests
 
 #### UX
-  - The app has a intutive and mobile friendly navigation
-  - Use an appealing design
-
+  - If existent use the design description in the `ux` folder.
 
 ### Backend
 - .NET web backend with ASP.NET
@@ -45,19 +42,11 @@ Have a overview of materials (inventory)
 - Swagger documentation
 
 ### Communication
-- Use open-telemetry to enable effective observability
-
+- Use open-telemetry 
 
 ### Infrastructure
-- Docker Compose
-  - SQLite database for data storage and user management
+- SQLite database for data storage and user management
 
 ### Deployment
-- The system is hosted as docker container
+- Create a dockerfile or docker compose file for development and production purposes.
 
-### Tests
-- The main functionalities (described in `specs.json`) MUST be covered by E2E tests
-- Every test MUST PASS.
-
-## Documentation
-Create a `README.md` for the most important functionalities and describe how to run the program.
